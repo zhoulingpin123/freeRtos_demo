@@ -176,7 +176,7 @@ int main( void)
 
 	printf("Hello, world!\r\n");
 
-	xTaskCreate(task1,"task1",100,NULL,1,NULL);
+	//xTaskCreate(task1,"task1",100,NULL,1,NULL);
 	xTaskCreate(task2,"task2",100,NULL,1,&xTask2Handle);
 
 
@@ -222,7 +222,7 @@ static void prvSetupHardware( void )
 	RCC_PLLConfig( RCC_PLLSource_HSE_Div1, RCC_PLLMul_9 );
 
 	/* Enable PLL. */
-	RCC_PLLCmd( ENABLE );
+	RCC_PLLCmd( ENABLE);
 
 	/* Wait till PLL is ready. */
 	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
