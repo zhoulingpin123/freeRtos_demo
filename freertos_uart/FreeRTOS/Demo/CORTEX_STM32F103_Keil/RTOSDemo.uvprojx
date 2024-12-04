@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORTEX_STM32F103_Keil;..\Common\include;..\..\Source\include;.\STM32F10xFWLib\inc</IncludePath>
+              <IncludePath>..\CORTEX_STM32F103_Keil;..\Common\include;..\..\Source\include;.\STM32F10xFWLib\inc;.\PracticeInc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -444,6 +444,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>TaskCreateDelate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PracticeSrc\TaskCreateDelate.c</FilePath>
             </File>
           </Files>
         </Group>

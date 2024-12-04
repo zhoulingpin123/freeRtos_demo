@@ -11,6 +11,7 @@
 ".\stm32f10x_tim.o"
 ".\serial.o"
 ".\main.o"
+".\taskcreatedelate.o"
 ".\tasks.o"
 ".\list.o"
 ".\queue.o"

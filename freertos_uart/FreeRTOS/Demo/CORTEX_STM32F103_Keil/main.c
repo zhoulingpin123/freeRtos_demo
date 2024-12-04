@@ -81,6 +81,7 @@
 #include "flash.h"
 #include "comtest2.h"
 #include "serial.h"
+#include "TaskCreateDelate.h"
 
 /* Task priorities. */
 #define mainQUEUE_POLL_PRIORITY				( tskIDLE_PRIORITY + 2 )
@@ -147,24 +148,6 @@ extern void vSetupTimerTest( void );
 
 
 /*-----------------------------------------------------------*/
-TaskHandle_t xTask2Handle = NULL;
-void task1(void *pvParameter){
-	while(1){
-		printf("1");
-		vTaskDelete(xTask2Handle);
-		vTaskDelay(100);
-	}
-	
-}
-
-void task2(void *pvParameter){
-	while(1){
-		printf("2");
-		//vTaskDelete(xTask1Handle);
-		
-		vTaskDelay(100);
-	}
-}
 
 int main( void)
 {
@@ -174,11 +157,8 @@ int main( void)
 
 	prvSetupHardware();
 
-	printf("Hello, world!\r\n");
 
-	xTaskCreate(task1,"task1",100,NULL,1,NULL);
-	xTaskCreate(task2,"task2",100,NULL,1,&xTask2Handle);
-
+	freertos_demo();
 
 	/* Start the scheduler. */
 	vTaskStartScheduler();
